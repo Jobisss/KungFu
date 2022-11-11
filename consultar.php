@@ -15,7 +15,7 @@
         <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Id</th>
+      <th scope="col">Ida</th>
       <th scope="col">Nome</th>
       <th scope="col">Foto</th>
       <th scope="col">Ano</th>
