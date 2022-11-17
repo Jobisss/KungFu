@@ -37,7 +37,7 @@
     <body>    
     <nav class="navbar fixed-top" style="background-color: #add8e6;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><h1 class="men"> Cadastro</h1></a>
+        <a class="navbar-brand" href="index.html"><h1 class="men"> Cadastro</h1></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
