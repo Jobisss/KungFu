@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<?php 
-
-
-
-?>
-=======
 <?php
 
 include("conexao.php");
+include("menu.php");
 
 $sql_mensagens = "SELECT * FROM aluno";
 
@@ -39,7 +33,6 @@ $sql_mensagens = "SELECT * FROM aluno";
     }
 ?>
 
->>>>>>> gustavo
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -47,13 +40,14 @@ $sql_mensagens = "SELECT * FROM aluno";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Consultar</title>
 </head>
 <body>
 <div class="container pdg">
         
         <form action="" method="post">
-            <a href="index.html"><input class="btn btn-primary" type="button" value="Votar"></a>
+            <a href="index.php"><input class="btn btn-primary" type="button" value="Votar"></a>
 
             <table class="table shesh">
                 <thead>
@@ -80,13 +74,8 @@ $sql_mensagens = "SELECT * FROM aluno";
                     <tr>
                         <th scope="row"><?php echo $mensagem["nome"]?></th>
                         <td><a target="_blank" href=""><?php echo $mensagem["idade"]?></a></td>
-                        <td><a href="<?php echo $mensagem["img"]?>"><?php echo $mensagem["img"]?></a>  </td>
-                        <td class="font"><?php ?></td>
-                        <td class="sss">                               
-                            
-                        </td>
-
-  
+                        <td><a href="<?php echo $mensagem["img"]?>"><?php echo $mensagem["img"]?></a> <input class="btn btn-primary" type="button" value="alterar">  <input class="btn btn-danger" type="button" value="deletar"></td>
+                     
                     </tr>
 
                 <?php
