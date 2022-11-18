@@ -1,26 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <title>Pg Principal</title>
     </head>
 
     <body>
-
-            <div class="topnav">
-                <a class="active" href="index.html">Alunos</a>
-                <a href="#news">Registrar</a>
-                <a href="#contact">Contato</a>
-                <a href="#about">Login</a>
-                <img id="teste" src="imgs/teste1.png" alt="" width="100px" height="80px">
-            </div>
+        <?php 
+          include("menu.php")
+        ?>
+            
         </div>
 
         <br>
@@ -98,13 +93,6 @@
 
 
     </body>
-
->>>>>>> marcelo
-=======
-     O professor é mestre. Verdade
-     Dieimes
-     <a href="cadastrar.php">alteração 23</a> <br>
-     <a href="consultar.php">consultar</a>
 </body>
->>>>>>> 70f384e6b24a953b355a29edea5234971b20a1c0
+
 </html>
