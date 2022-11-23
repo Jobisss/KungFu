@@ -74,7 +74,8 @@ $sql_mensagens = "SELECT * FROM aluno";
                     <tr>
                         <th scope="row"><?php echo $mensagem["nome"]?></th>
                         <td><a target="_blank" href=""><?php echo $mensagem["idade"]?></a></td>
-                        <td><a href="<?php echo $mensagem["img"]?>"><?php echo $mensagem["img"]?></a> <input class="btn btn-primary" type="button" value="alterar">  <input class="btn btn-danger" type="button" value="deletar"></td>
+                        <td><a href="<?php echo $mensagem["img"]?>"><?php echo $mensagem["img"]?></a> 
+                        <a href="editar.php?id=<?php echo $mensagem['id'];?>"><input class="btn btn-primary" type="button" value="alterar"></a>  <input class="btn btn-danger" type="button" value="deletar"></td>
                      
                     </tr>
 
