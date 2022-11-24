@@ -1,4 +1,25 @@
+<?php
+    include("conexao.php");
 
+
+
+
+    $sql_mensagens = "SELECT * FROM  aluno ";
+    $consulta_mensagens = $mysqli->query($sql_mensagens) or die($mysqli->error);
+    $quantidade_mensagens = $consulta_mensagens->num_rows;
+
+
+
+
+
+
+    $mensagem = $consulta_mensagens -> fetch_assoc();
+
+    //var_dump($quantidade_mensagens);
+
+
+  
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -13,7 +34,7 @@
 
     <body>
         <?php 
-          include("menu.php")
+          include("menu.php");
         ?>
             
         </div>
@@ -22,73 +43,47 @@
         <br>
         <br>
         <br>
+        
         <div class="container text-center">
             <div class="row">
-              <div class="col order-last">
-                <div class="col-4">
-                  <div class="card" style="width: 18rem;">
-                      <img src="img.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Aluno 1  </h5>
-                        <p class="card-text"></p>
-                      </div>
-                    </div>
-                    </div>
-                </div>
-              <div class="col-4">
-                <div class="col align-self-center">          
-                  <div class="card" style="width: 18rem;">
-                    <img src="imgs/chiquinho.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Aluno 2</h5>
-                      <p class="card-text"></p>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-              <div class="col order-first">
-                <div class="col align-self-end">
-                  <div class="card" style="width: 18rem;">
-                    <img src="imgs/transferir (3).png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Aluno 3</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <div class="row">
-                      <div class="col order-last">
-                       
-                          <div class="card" style="width: 18rem;">
-                              <img src="img.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Aluno 1  </h5>
-                                <p class="card-text"></p>
-                              </div>
-                            </div>
-                            </div>
-                        </div>
-                     
-                        <div class="col align-self-center">          
-                          <div class="card" style="width: 18rem;">
-                            <img src="imgs/chiquinho.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Aluno 2</h5>
-                              <p class="card-text"></p>
-                            </div>
-                          </div>
-                          </div>
-                      </div>
-                     
-                        <div class="col align-self-end">
-                          <div class="card" style="width: 18rem;">
-                            <img src="imgs/transferir (3).png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Aluno 3</h5>
-                              <p class="card-text"></p>
-                            </div>
-                </div>
-                </div>
-              </div> 
+              
+              
+              <?php
 
+           
+            if($quantidade_mensagens == 0){
+
+              
+            ?>
+
+            <tr>
+                            <td colspan="6">Nenhuma  mensagem encontrada</td>
+                        </tr>
+                    <?php
+                        } else {
+                            while ($mensagem = $consulta_mensagens -> fetch_assoc()){
+                              
+                    ?>
+                <div class="col">
+                
+                  <div class="card" style="width: 18rem;">
+                      <img src="<?php echo $mensagem['img'];  ?>" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title"><?php echo $mensagem['nome'];  ?> <br> <br><?php echo $mensagem['idade']; ?></h5>
+                        <p class="card-text"></p>
+                </div>                   
+                  </div>
+                      </div>
+            <?php
+            }
+            }
+
+
+            ?>
+
+</div>
+                    </div>
+                    </div>
               
 
 
